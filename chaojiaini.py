@@ -82,9 +82,18 @@ for x in range(5):
 #用字典和列表来实现表格的打印
 r1 = dict(name = "高效1",age = "18",salary= 30000,city = "北京"  )
 r2 = dict(name = "高效2",age = "19",salary= 20000,city = "上海"  )
+r3 = dict(name = "高效3",age = "20",salary= 15000,city = "深圳"  )
 
 tb = [r1,r2,r3]
 for x in tb:
+    if x.get("salary") > 15000:
+        print(x)
+
+#要求输入员工的薪资，若薪资小于0则重新输入。最后打印出录入员工的数量和薪资明细，以及平均薪资
+empNum = 0  #员工人数
+salarySum = 0   #薪资总和
+salarys = []    #员工薪资，
+while True:
     s = input("请输入员工的薪资（按Q或q结束）")
     if s.upper() == "Q":
         print("录入完成，退出")
